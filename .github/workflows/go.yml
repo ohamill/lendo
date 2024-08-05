@@ -19,7 +19,7 @@ jobs:
         go-version: '1.22'
 
     - name: Build
-      run: go build -v ./lendo-backend/...
+      run: go build -C ./lendo-backend -v
 
     - name: Test
-      run: go test -v ./lendo-backend/...
+      run: cd ./lendo-backend && go test -v ./...
